@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import colors from "tailwindcss/colors";
 
 export default {
   content: [
@@ -9,8 +10,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: colors.red,
+        background: {
+          DEFAULT: "#000000",
+          200: "#666666",
+          300: "#595959",
+          400: "#4d4d4d",
+          500: "#404040",
+          600: "#333333",
+          700: "#262626",
+          800: "#1a1a1a",
+          900: "#0d0d0d",
+        },
+        typography: {
+          DEFAULT: "#FFFFFF",
+          secondary: colors.stone["300"],
+        },
       },
     },
   },
